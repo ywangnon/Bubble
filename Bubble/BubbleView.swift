@@ -36,6 +36,7 @@ class BubbleView: UIView {
         
         // 테두리 자르기
         self.layer.cornerRadius = self.bounds.height/2
+        print("버블뷰 생성", self.bounds.height/2)
         self.layer.masksToBounds = true
     }
     
