@@ -14,20 +14,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bubbleView = BubbleView(frame: CGRect(origin: CGPoint(x: self.view.frame.midX, y: self.view.frame.midY), size: CGSize(width: 40, height: 40)))
-        self.view.addSubview(bubbleView)
+        self.view.backgroundColor = .black
     }
     
     override func viewDidAppear(_ animated: Bool) {
         // 일정 시간 간격으로 계속해서 생성
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(bubbleAnimation), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(bubbleAnimation), userInfo: nil, repeats: true)
     }
     
     @objc func bubbleAnimation() {
         // 버블뷰 생성
-        let xPosition = CGFloat.random(in: 0...self.view.bounds.width)
-        let yPosition = self.view.bounds.height - 40
-        let bubbleView = BubbleView(frame: CGRect(origin: CGPoint(x: xPosition, y: yPosition), size: CGSize(width: 40, height: 40)))
+        let xPosition = CGFloat.random(in: -100...self.view.bounds.width)
+        let yPosition = self.view.bounds.height - CGFloat.random(in: 100...200)
+        let bubbleView = UIImageView(frame: CGRect(origin: CGPoint(x: xPosition, y: yPosition), size: CGSize(width: 150, height: 150)))
+        bubbleView.image = UIImage(named: "bubble")
+        bubbleView.alpha = 0.5
         self.view.addSubview(bubbleView)
         
         UIView.animate(withDuration: 4, delay: 0, options: []) {
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
                     bubbleView.frame.origin.x -= CGFloat.random(in: 0...80)
                 }
                 
+                bubbleView.frame.size = CGSize(width: 200, height: 200)
                 bubbleView.alpha = 0
             }
         } completion: { _ in

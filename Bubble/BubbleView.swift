@@ -8,7 +8,6 @@
 import UIKit
 
 class BubbleView: UIView {
-    
     override func draw(_ rect: CGRect) {
         let circlePath = UIBezierPath(roundedRect: rect,
                                       cornerRadius: self.bounds.height/2)
