@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018B34A32D985BB8007A3C1F /* BubbleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B34A22D985BB8007A3C1F /* BubbleContainerView.swift */; };
 		0199D1072886491D00A3A13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199D1062886491D00A3A13E /* AppDelegate.swift */; };
 		0199D1092886491D00A3A13E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199D1082886491D00A3A13E /* SceneDelegate.swift */; };
 		0199D10B2886491D00A3A13E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199D10A2886491D00A3A13E /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018B34A22D985BB8007A3C1F /* BubbleContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleContainerView.swift; sourceTree = "<group>"; };
 		0199D1032886491D00A3A13E /* Bubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0199D1062886491D00A3A13E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0199D1082886491D00A3A13E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				0199D1082886491D00A3A13E /* SceneDelegate.swift */,
 				0199D10A2886491D00A3A13E /* ViewController.swift */,
 				0199D11A2886497400A3A13E /* BubbleView.swift */,
+				018B34A22D985BB8007A3C1F /* BubbleContainerView.swift */,
 				0199D10C2886491E00A3A13E /* Main.storyboard */,
 				0199D10F2886492000A3A13E /* Assets.xcassets */,
 				0199D1112886492000A3A13E /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				0199D1072886491D00A3A13E /* AppDelegate.swift in Sources */,
 				0199D11B2886497400A3A13E /* BubbleView.swift in Sources */,
 				0199D1092886491D00A3A13E /* SceneDelegate.swift in Sources */,
+				018B34A32D985BB8007A3C1F /* BubbleContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
