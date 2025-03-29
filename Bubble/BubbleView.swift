@@ -8,18 +8,21 @@
 import UIKit
 
 class BubbleView: UIView {
+    var bubbleColor: UIColor = .systemRed // 외부에서 바꿀 수 있게
+    
     override func draw(_ rect: CGRect) {
+        // 원형
         let circlePath = UIBezierPath(ovalIn: rect)
         
-        // 색상
-        UIColor.systemRed.setFill()
+        // 색상 채우기
+        bubbleColor.setFill()
         circlePath.fill()
-        
+
         // 테두리
         UIColor.black.setStroke()
         circlePath.stroke()
-        
-        // 광택 효과(arc)
+
+        // 광택(arc) 효과 (원하면 지워도 됨)
         let lightPath = UIBezierPath(
             arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
             radius: (bounds.height / 2 - 8),
@@ -33,12 +36,9 @@ class BubbleView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .clear
-        
-        // 둥근 모서리(클리핑)
-        // 꼭 init이 아니라 layoutSubviews에서 갱신해도 됨
-        self.layer.cornerRadius = frame.height / 2
-        self.layer.masksToBounds = true
+        backgroundColor = .clear
+        layer.cornerRadius = frame.height / 2
+        layer.masksToBounds = true
     }
     
     required init?(coder: NSCoder) {
