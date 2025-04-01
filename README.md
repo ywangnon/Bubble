@@ -38,4 +38,3 @@
 - `generateBubble()`는 `BubbleContainerView`가 내부적으로 **버블을 “하나” 생성**하고 **애니메이션을 적용**하는 함수입니다.  
 - 크기, 위치, 이미지 혹은 색상, 투명도 등 **모든 설정은 `BubbleContainerView`의 프로퍼티**를 통해 사전에 지정해둡니다.  
 - `startGeneratingBubbles()`를 통해 설정한 간격(`bubbleSpawnInterval`)마다 자동으로 호출되어, **여러 개의 버블을 연속적으로 생성**하게 됩니다.
-```
